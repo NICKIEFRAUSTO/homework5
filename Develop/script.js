@@ -13,7 +13,7 @@ setInterval (displayTime, 1000);
 
 
 let timeBlockEls = [
-    { AM9: "09:00PM"},
+    { AM9:  "09:00"},
     { AM10: "10:00"},
     { AM11: "11:00"},
     { PM12: "12:00"},
@@ -27,12 +27,19 @@ let timeBlockEls = [
 for (var i = 0; i < timeBlockEls.length; i++) {
     function colorChange() {
       if (timeBlockEls<moment().hour())  {
-          timeBlockEls.addclass('.future')
-      }
-    }if (timeBlockEls>moment().hour()) {
-        timeBlockEls.attr('.past')
+          $(timeBlockEls).addclass('.future')
+    
+        } else (timeBlockEls>moment().hour()) 
+            $(timeBlockEls).addclass('.past');
 
+        }
     
     }
+
+    var calendar = document.querySelector("#AM9").value;
+    
+    function rendercalendar() {
+        var calendartxt = localStorage.getItem("calendar");
+    
 }
 
